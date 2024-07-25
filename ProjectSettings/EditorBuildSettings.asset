@@ -5,14 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/JUEGO.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a044e61584491ad41891cdf1caf6619c
   - enabled: 1
     path: Assets/Scenes/Seleccion.unity
     guid: 95820d946ba87d446a8d62e8418982de
+  - enabled: 1
+    path: Assets/Scenes/JUEGO.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

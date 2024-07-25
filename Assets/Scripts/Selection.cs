@@ -34,6 +34,12 @@ public class Selection : MonoBehaviour
         Application.LoadLevel("Menu");
     }
 
+    public void ButtonNext() 
+    {
+        Application.LoadLevel("JUEGO");
+
+    }
+
     public void ButtonIzquierdaPlayer1()
     {
         if (PlayerPrefs.GetInt("valuePlayer", 1) <= 1)
