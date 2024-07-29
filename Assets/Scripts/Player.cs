@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     public float horialAxis, speed;
     private Rigidbody2D rb_player;
-    public bool canShoot, grounded;
+    public bool canShoot, grounded, canHead;
     private GameObject _ball;
     public Transform checkGround;
     public LayerMask ground_layer;
@@ -23,6 +23,14 @@ public class Player : MonoBehaviour
     void Update()
     {
         horialAxis = Input.GetAxis("Horizontal");
+        if(grounded == true)
+        {
+            canHead = false;
+        }
+        else
+        {
+            canHead = true;
+        }
     }
 
     private void FixedUpdate()
@@ -53,6 +61,7 @@ public class Player : MonoBehaviour
     {
         if (grounded == true)
         {
+            canHead = true;
             rb_player.velocity = new Vector2(rb_player.velocity.x, 15);
         }
     }

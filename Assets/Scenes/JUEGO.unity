@@ -1555,6 +1555,7 @@ GameObject:
   - component: {fileID: 657080875}
   - component: {fileID: 657080877}
   - component: {fileID: 657080876}
+  - component: {fileID: 657080878}
   m_Layer: 0
   m_Name: Cabeza
   m_TagString: Untagged
@@ -1713,6 +1714,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &657080878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657080874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3afb8b58006e1438da97a7bba51124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &787420886
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,6 +2109,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958171170}
   m_CullTransparentMesh: 1
+--- !u!1 &1059136694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059136695}
+  m_Layer: 0
+  m_Name: check Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1059136695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059136694}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.026, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2014101578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1109040742
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,6 +2644,7 @@ MonoBehaviour:
   speed: 200
   canShoot: 0
   grounded: 0
+  canHead: 0
   checkGround: {fileID: 2042936175}
   ground_layer:
     serializedVersion: 2
@@ -2719,6 +2764,7 @@ GameObject:
   - component: {fileID: 1355474023}
   - component: {fileID: 1355474025}
   - component: {fileID: 1355474024}
+  - component: {fileID: 1355474026}
   m_Layer: 0
   m_Name: Cabeza
   m_TagString: Untagged
@@ -2877,6 +2923,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1355474026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355474022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb53914e23f72654abebf8673db5c56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1381715791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,6 +4215,7 @@ Transform:
   m_Children:
   - {fileID: 253011685}
   - {fileID: 1721991737}
+  - {fileID: 1059136695}
   m_Father: {fileID: 1662195084}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2014101579
@@ -4198,11 +4257,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37f09e51efe9623419f46b03875172d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeDefense: 4.01
+  rangeDefense: 5
   speed: 2500
   defense: {fileID: 1927672751}
+  checkGround: {fileID: 1059136695}
   canShootAI: 0
   canHead: 0
+  grounded: 0
+  ground_layer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &2042936174
 GameObject:
   m_ObjectHideFlags: 0
