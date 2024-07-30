@@ -10,9 +10,7 @@ public class Player : MonoBehaviour
     public bool canShoot, grounded, canHead;
     private GameObject _ball;
     public Transform checkGround;
-    public LayerMask ground_layer;
-    
-    // Start is called before the first frame update
+    public LayerMask ground_layer; // Start is called before the first frame update
     void Start()
     {
         rb_player = GetComponent<Rigidbody2D>();
@@ -41,7 +39,10 @@ public class Player : MonoBehaviour
 
     public void Move(int value)
     {
-        horialAxis = value;
+        if (GameController.instance.isScore == false && GameController.instance.EndMatch == false)
+        {
+            horialAxis = value;
+        }
     }
 
     public void StopMove()
@@ -53,13 +54,13 @@ public class Player : MonoBehaviour
     {
         if (canShoot == true)
         {
-            _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(400, 500));
+            _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-450, 550));
         }
     }
     
     public void Jump()
     {
-        if (grounded == true)
+        if (grounded == true && GameController.instance.isScore == false && GameController.instance.EndMatch == false)
         {
             canHead = true;
             rb_player.velocity = new Vector2(rb_player.velocity.x, 15);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class netHeadAI : MonoBehaviour
 {
     private GameObject _ball;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,32 @@ public class netHeadAI : MonoBehaviour
     {
         if(collision.gameObject.tag == "Balon")
         {
-            _ball.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-            _ball.GetComponent<Rigidbody2D>().AddForce ( new Vector2(400, 400));
+            if (ShouldUseAltHead())
+            {
+                HeadAlt();
+            }
+            else
+            {
+                Head();
+            }
         }
+    }
+
+    public void Head()
+    {
+        _ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-100, 100));
+    }
+
+    public void HeadAlt()
+    {
+        _ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-200, 200));
+    }
+
+    private bool ShouldUseAltHead()
+    {
+        // Example condition: use alternate head if the ball is closer to the net
+        return Vector2.Distance(transform.position, _ball.transform.position) < 2.0f;
     }
 }

@@ -7,6 +7,10 @@ TagManager:
   - Balon
   - AI
   - canHeadAI
+  - GoalsDerecha
+  - GoalsIzquierda
+  - canShoeAI
+  - BihindCol
   layers:
   - Default
   - TransparentFX

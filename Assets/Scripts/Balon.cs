@@ -7,6 +7,7 @@ using UnityEngine;
 public class Balon : MonoBehaviour
 {
     private GameObject _player, _AI;
+    public GameObject goals;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class Balon : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D (Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -35,9 +36,36 @@ public class Balon : MonoBehaviour
         {
             _AI.GetComponent<AI>().canHead= true;
         }
+        if(collision.gameObject.tag == "GoalsDerecha")
+        {
+            if (GameController.instance.isScore == false && GameController.instance.EndMatch == false)
+            {
+                Instantiate(goals, new Vector3(0, -2, 0), Quaternion.identity);
+                GameController.instance.number_GoalsIzquierda++;
+                GameController.instance.isScore = true;
+                GameController.instance.ContinueMatch(true);
+            }
+        }
+        if(collision.gameObject.tag == "GoalsIzquierda")
+        {
+            {
+                if (GameController.instance.isScore == false && GameController.instance.EndMatch == false)
+                {
+                    Instantiate(goals, new Vector3(0, -2, 0), Quaternion.identity);
+                    GameController.instance.number_GoalsDerecha++;
+                    GameController.instance.isScore = true;
+                    GameController.instance.ContinueMatch(false);
+                }
+            }
+        }
+
+        if (collision.gameObject.tag == "BihindCol")
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D (Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
@@ -47,6 +75,7 @@ public class Balon : MonoBehaviour
         {
             _AI.GetComponent<AI>().canShootAI = false;
         }
+
         if (collision.gameObject.tag == "canHeadAI")
         {
             _AI.GetComponent<AI>().canHead = false;

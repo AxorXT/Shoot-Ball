@@ -22,10 +22,10 @@ public class netHeadPlayer : MonoBehaviour
     {
         if (collision.gameObject.tag == "Balon")
         {
-            if (_player.GetComponent <Player> () .canHead == true)
+            if (_player.GetComponent<Player>().canHead == true)
             {
                 _ball.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-                _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-400, 400));
+                _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-300, -400));
             }
 
             
