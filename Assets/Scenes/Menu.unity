@@ -780,6 +780,33 @@ MonoBehaviour:
   - Netherlands
   - Portugal
   - Spain
+  head:
+  - {fileID: -5156993582514690110, guid: 2c7e0965968e4af4b9736d562620586e, type: 3}
+  - {fileID: -5156993582514690110, guid: 5796a4eb89f6f174e96ff9725fb10ac4, type: 3}
+  - {fileID: -5156993582514690110, guid: 2c68cb8d63cf8844c815b187e11676dd, type: 3}
+  - {fileID: -5156993582514690110, guid: 352b391ff31fef04ea8aa30debe35486, type: 3}
+  - {fileID: -5156993582514690110, guid: efdd14610be36df4ba0480a95e87cb84, type: 3}
+  - {fileID: -5156993582514690110, guid: 8e5f267a2a1329a418849e6097625d41, type: 3}
+  - {fileID: -5156993582514690110, guid: f35ea9c20ab40904a8aceb87d3fdf70a, type: 3}
+  - {fileID: -5156993582514690110, guid: d5fd4c5f98a584849ad605e03b4b834a, type: 3}
+  body:
+  - {fileID: -6199720543617963891, guid: 06d82eb3e76ced44c87701560d7cebd8, type: 3}
+  - {fileID: -6199720543617963891, guid: e9e7db45f96ca5549be23031a59210cd, type: 3}
+  - {fileID: -6199720543617963891, guid: 619b2a42938ca964587b85d10ee88fdb, type: 3}
+  - {fileID: -6199720543617963891, guid: df19e758593cf2f4591173ad388c3eac, type: 3}
+  - {fileID: -6199720543617963891, guid: 0c1d47d2ca9780044a8f20406c9b9e38, type: 3}
+  - {fileID: -6199720543617963891, guid: 49d4ed6dde5513c47825a3f080698ea8, type: 3}
+  - {fileID: -6199720543617963891, guid: 2956b967c9108d3489a598a1c9906d17, type: 3}
+  - {fileID: -6199720543617963891, guid: 373432b7f92c8664a99fdd1597ebf418, type: 3}
+  shoe:
+  - {fileID: -3871333589794094181, guid: f7169e99465bfd14b9ca83f2a535acf2, type: 3}
+  - {fileID: -3871333589794094181, guid: 5f4c249049ab53943ad925789c00a2ed, type: 3}
+  - {fileID: -3871333589794094181, guid: 40c1afdafd3dfda488b06e1665de4499, type: 3}
+  - {fileID: -3871333589794094181, guid: cea8715f9c92fc34581361fdaf8ec551, type: 3}
+  - {fileID: -3871333589794094181, guid: 4bae55a44dfd7464d8d008b706057737, type: 3}
+  - {fileID: -3871333589794094181, guid: dfb7847e0b47d8749bb9e1b4220fe5cc, type: 3}
+  - {fileID: -3871333589794094181, guid: 0a141deb6ddd7ce469b317a69107947c, type: 3}
+  - {fileID: -3871333589794094181, guid: 4b7ae498c69d9df4a812c7dee95d4cc5, type: 3}
 --- !u!4 &1264361524
 Transform:
   m_ObjectHideFlags: 0

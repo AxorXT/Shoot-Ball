@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour
     public Image BanderaIzquierda, BanderaDerecha;
     public Text nombreIzquierdo, nombreDerecho;
 
+    public SpriteRenderer headPlayer, bodyPlayer, shoePlayer, headAI, bodyAI, shoeAI;
+
     private void Awake()
     {
         if (instance == null)
@@ -32,6 +34,18 @@ public class GameController : MonoBehaviour
         _AI = GameObject.FindGameObjectWithTag("AI");
         _Player = GameObject.FindGameObjectWithTag("Player");
         
+        BanderaIzquierda.sprite = UITeam.instance.BanderaEquipo[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
+        nombreIzquierdo.text = UITeam.instance.NombreTeam[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
+        BanderaDerecha.sprite = UITeam.instance.BanderaEquipo[PlayerPrefs.GetInt("valueAI", 1) - 1];
+        nombreDerecho.text = UITeam.instance.NombreTeam[PlayerPrefs.GetInt("valueAI", 1) - 1];
+        
+        headAI.sprite = UITeam.instance.head[PlayerPrefs.GetInt("valueAI", 1) - 1];
+        bodyAI.sprite = UITeam.instance.body[PlayerPrefs.GetInt("valueAI", 1) - 1];
+        shoeAI.sprite = UITeam.instance.shoe[PlayerPrefs.GetInt("valueAI", 1) - 1];
+        
+        headPlayer.sprite = UITeam.instance.head[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
+        bodyPlayer.sprite = UITeam.instance.body[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
+        shoePlayer.sprite = UITeam.instance.shoe[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
         
         StartCoroutine(BeginMatch());
     }

@@ -9,6 +9,8 @@ public class UITeam : MonoBehaviour
     public Sprite[] BanderaEquipo;
     public String[] NombreTeam;
 
+    public Sprite[] head, body, shoe;
+
     private void Awake()
     {
         if (instance == null)
