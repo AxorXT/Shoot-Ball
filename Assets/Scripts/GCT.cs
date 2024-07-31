@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class GCT : MonoBehaviour
 {
-    public static GameController instance;
+    public static GCT instance;
     public Text txt_GoalsDerecha, txt_GoalsIzquierda, txt_timeMatch;
     public static int number_GoalsDerecha, number_GoalsIzquierda;
     public bool isScore, EndMatch;
@@ -36,20 +36,20 @@ public class GameController : MonoBehaviour
         _ball = GameObject.FindGameObjectWithTag("Balon");
         _AI = GameObject.FindGameObjectWithTag("AI");
         _Player = GameObject.FindGameObjectWithTag("Player");
-        
+
         BanderaIzquierda.sprite = UITeam.instance.BanderaEquipo[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
         nombreIzquierdo.text = UITeam.instance.NombreTeam[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
         BanderaDerecha.sprite = UITeam.instance.BanderaEquipo[PlayerPrefs.GetInt("valueAI", 1) - 1];
         nombreDerecho.text = UITeam.instance.NombreTeam[PlayerPrefs.GetInt("valueAI", 1) - 1];
-        
+
         headAI.sprite = UITeam.instance.head[PlayerPrefs.GetInt("valueAI", 1) - 1];
         bodyAI.sprite = UITeam.instance.body[PlayerPrefs.GetInt("valueAI", 1) - 1];
         shoeAI.sprite = UITeam.instance.shoe[PlayerPrefs.GetInt("valueAI", 1) - 1];
-        
+
         headPlayer.sprite = UITeam.instance.head[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
         bodyPlayer.sprite = UITeam.instance.body[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
         shoePlayer.sprite = UITeam.instance.shoe[PlayerPrefs.GetInt("valuePlayer", 1) - 1];
-        
+
         StartCoroutine(BeginMatch());
     }
 
@@ -77,7 +77,7 @@ public class GameController : MonoBehaviour
                 break;
             }
         }
-        
+
     }
 
     public void ContinueMatch(bool winPlayer)
@@ -133,5 +133,5 @@ public class GameController : MonoBehaviour
         Application.LoadLevel("Fin");
     }
 
-    
+
 }

@@ -41,7 +41,7 @@ public class Balon : MonoBehaviour
             if (GameController.instance.isScore == false && GameController.instance.EndMatch == false)
             {
                 Instantiate(goals, new Vector3(0, -2, 0), Quaternion.identity);
-                GameController.instance.number_GoalsIzquierda++;
+                GameController.number_GoalsIzquierda++;
                 GameController.instance.isScore = true;
                 GameController.instance.ContinueMatch(true);
             }
@@ -52,7 +52,7 @@ public class Balon : MonoBehaviour
                 if (GameController.instance.isScore == false && GameController.instance.EndMatch == false)
                 {
                     Instantiate(goals, new Vector3(0, -2, 0), Quaternion.identity);
-                    GameController.instance.number_GoalsDerecha++;
+                    GameController.number_GoalsDerecha++;
                     GameController.instance.isScore = true;
                     GameController.instance.ContinueMatch(false);
                 }

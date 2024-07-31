@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
     {
         if (canShoot == true)
         {
-            _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(-450, 550));
+            _ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(450, 550));
         }
     }
     
